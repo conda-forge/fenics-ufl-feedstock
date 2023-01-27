@@ -1,5 +1,5 @@
 {% set name = "fenics-ufl" %}
-{% set version = "2023.1.1" %}
+{% set version = "2023.1.1.post0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   # url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   url: https://github.com/fenics/ufl/archive/{{ version }}.tar.gz
-  sha256: 874a350053464eebfd03a3f1e7191d9e2c9716f508b1b62f43c73b1a7ea4e4b2
+  sha256: 9e6e87f1447635029cec42604f62a76bba84899beb4b8822af10389d1f93a9b6
 
 build:
   noarch: python
