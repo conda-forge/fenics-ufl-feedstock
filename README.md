@@ -1,11 +1,11 @@
-About fenics-ufl
-================
+About fenics-ufl-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fenics-ufl-feedstock/blob/main/LICENSE.txt)
 
 Home: https://fenicsproject.org
 
 Package license: LGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fenics-ufl-feedstock/blob/main/LICENSE.txt)
 
 Summary: Unified Form Language
 
