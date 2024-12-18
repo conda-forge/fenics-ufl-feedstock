@@ -13,21 +13,22 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install --no-deps -vv .
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools >=62
     - wheel
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - ufl
   commands:
