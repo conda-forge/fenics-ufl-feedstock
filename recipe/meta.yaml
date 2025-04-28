@@ -1,5 +1,5 @@
 {% set name = "fenics-ufl" %}
-{% set version = "2024.2.0" %}
+{% set version = "2025.1.0" %}
 {% set tag = version %}
 
 package:
@@ -9,11 +9,11 @@ package:
 source:
   # url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ tag }}.tar.gz
   url: https://github.com/fenics/ufl/archive/{{ tag }}.tar.gz
-  sha256: d9353d23ccbdd9887f8d6edab74c04fe06d818da972072081dbf0c25bc86f5a7
+  sha256: a3aedb6fd06bb43e954c96e7cccc190a29dc9a00287f95bc365dbfc81b43a5f9
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps -vv .
 
 requirements:
