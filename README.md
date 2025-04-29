@@ -3,7 +3,7 @@ About fenics-ufl-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fenics-ufl-feedstock/blob/main/LICENSE.txt)
 
-Home: https://fenicsproject.org
+Home: https://fenicsproject.org/
 
 Package license: LGPL-3.0-or-later
 
@@ -19,7 +19,6 @@ More precisely, it defines a flexible interface for choosing finite element spac
 and defining expressions for weak forms in a notation close to mathematical notation.
 
 UFL is part of the FEniCS Project.
-
 
 Current build status
 ====================
