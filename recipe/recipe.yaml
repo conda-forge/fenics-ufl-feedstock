@@ -23,12 +23,14 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
+    - setuptools
   run:
     - python >=${{ python_min }}
     - numpy
 
-test:
+tests:
   - python:
+    python_version: ${{ python_min }}.*
     imports:
       - ufl
       - ufl.utils
@@ -36,6 +38,12 @@ test:
       - ufl.core
       - ufl.corealg
       - ufl.algorithms
+  - requirements:
+    run:
+      - pip
+      - python ${{ python_min }}.*
+    script:
+      - pip check
 
 about:
   summary: Unified Form Language
