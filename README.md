@@ -9,7 +9,7 @@ Package license: LGPL-3.0-or-later
 
 Summary: Unified Form Language
 
-Development: https://github.com/fenics/ufl
+Development: https://bitbucket.org/fenics-project/ufl
 
 Documentation: https://fenics.readthedocs.io/projects/ufl/en/latest/
 
