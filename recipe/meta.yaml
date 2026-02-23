@@ -7,6 +7,8 @@ package:
 source:
   url: https://bitbucket.org/fenics-project/ufl/downloads/ufl-{{ version }}.tar.gz
   sha256: 213a56bfa2edb0365909fa6f110f970e582b10a3f5f1fd9a0e85254f1eefaa11
+  patches:
+    - setuptools82.patch
 
 build:
   number: 39

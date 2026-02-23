@@ -1,0 +1,28 @@
+From 5199d7b2599d6e1e89fbe4f1c43ea71a1902afa5 Mon Sep 17 00:00:00 2001
+From: Sebastian Blauth <sebastian.blauth@itwm.fraunhofer.de>
+Date: Mon, 23 Feb 2026 10:42:59 +0100
+Subject: [PATCH] Replace use of pkg_resources with importlib.metadata
+
+---
+ ufl/__init__.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/ufl/__init__.py b/ufl/__init__.py
+index 50745045..d454addb 100644
+--- a/ufl/__init__.py
++++ b/ufl/__init__.py
+@@ -247,9 +247,9 @@ A very brief overview of the language contents follows:
+ # Modified by Lawrence Mitchell, 2014
+ # Modified by Massimiliano Leoni, 2016
+ 
+-import pkg_resources
++import importlib.metadata
+ 
+-__version__ = pkg_resources.get_distribution("fenics-ufl").version
++__version__ = importlib.metadata.version("fenics-ufl")
+ 
+ # README
+ # Imports here should be what the user sees when doing "from ufl import *",
+-- 
+2.47.3
+
