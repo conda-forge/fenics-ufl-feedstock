@@ -1,4 +1,8 @@
-{% set version = "2019.1.0" %}
+schema_version: 1
+
+context:
+  name: fenics-ufl
+  version: "2019.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -24,13 +28,14 @@ requirements:
     - numpy
 
 test:
-  imports:
-    - ufl
-    - ufl.utils
-    - ufl.finiteelement
-    - ufl.core
-    - ufl.corealg
-    - ufl.algorithms
+  - python:
+    imports:
+      - ufl
+      - ufl.utils
+      - ufl.finiteelement
+      - ufl.core
+      - ufl.corealg
+      - ufl.algorithms
 
 about:
   summary: Unified Form Language
