@@ -16,6 +16,8 @@ source:
 
 build:
   number: 39
+  skip:
+    - win
   noarch: python
   script: ${{ PYTHON }} -m pip install --no-deps -vv .
 
@@ -30,14 +32,14 @@ requirements:
 
 tests:
   - python:
-    python_version: ${{ python_min }}.*
-    imports:
-      - ufl
-      - ufl.utils
-      - ufl.finiteelement
-      - ufl.core
-      - ufl.corealg
-      - ufl.algorithms
+      imports:
+        - ufl
+        - ufl.utils
+        - ufl.finiteelement
+        - ufl.core
+        - ufl.corealg
+        - ufl.algorithms
+      python_version: ${{ python_min }}.*
   - requirements:
     run:
       - pip
