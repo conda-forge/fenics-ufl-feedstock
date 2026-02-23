@@ -1,19 +1,15 @@
-schema_version: 1
-
-context:
-  name: fenics-ufl
-  version: "2025.2.1"
+{% set version = "2019.1.0" %}
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: fe301b211cb4e91e91a92f53e2412e131b5737aa1f2c4ac6059d058ea6e10145
+  url: https://bitbucket.org/fenics-project/ufl/downloads/ufl-{{ version }}.tar.gz
+  sha256: 213a56bfa2edb0365909fa6f110f970e582b10a3f5f1fd9a0e85254f1eefaa11
 
 build:
-  number: 0
+  number: 39
   noarch: python
   script: ${{ PYTHON }} -m pip install --no-deps -vv .
 
@@ -21,22 +17,18 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - setuptools >=62
-    - wheel
   run:
     - python >=${{ python_min }}
     - numpy
 
-tests:
-  - python:
-      imports:
-        - ufl
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
+test:
+  imports:
+    - ufl
+    - ufl.utils
+    - ufl.finiteelement
+    - ufl.core
+    - ufl.corealg
+    - ufl.algorithms
 
 about:
   summary: Unified Form Language
@@ -50,7 +42,7 @@ about:
   license: LGPL-3.0-or-later
   license_file: COPYING.LESSER
   homepage: https://fenicsproject.org
-  repository: https://github.com/fenics/ufl
+  repository: https://bitbucket.org/fenics-project/ufl
   documentation: https://fenics.readthedocs.io/projects/ufl/en/latest/
 
 extra:
