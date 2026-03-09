@@ -156,4 +156,5 @@ Feedstock Maintainers
 
 * [@jorgensd](https://github.com/jorgensd/)
 * [@minrk](https://github.com/minrk/)
+* [@sblauth](https://github.com/sblauth/)
 
