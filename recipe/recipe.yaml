@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fenics-ufl
-  version: "2026.1.0"
+  version: "2026.2.0"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: c83be6dcd4301f7e27b70cda076ada36e0bedabb9338d87a38fce44f3ab0f9ce
+  sha256: 284efa33bc71de57fccd76e363e5e5814b276ee0b37af5fd22ef71aaa83de6ac
 
 build:
   number: 0
